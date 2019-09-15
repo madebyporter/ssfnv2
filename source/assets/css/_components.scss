@@ -1,0 +1,21 @@
+.btn {
+  border-radius: 0;
+  @extend .t-16;
+  padding: $space-x $space-small;
+}
+
+.card {
+  padding: $space-medium;
+  @include flexbox;
+  justify-content: flex-end;
+}
+.card-inner {
+  height: auto;
+}
+.card-journal {
+  height: 300px;
+  margin: 0 0 $space-small 0;
+  @media (min-width: $mq-laptop) {
+    height: 500px;
+  }
+}

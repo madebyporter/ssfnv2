@@ -1,0 +1,82 @@
+= wrap_layout :layout do
+  .site-block.site-block-hero
+    .container-wrap
+      .container-fluid
+        .row
+          .col-md-1
+            .site-header-pagetitle
+              .site-header-pagetitle-rotate
+                .site-header-pagetitle-text
+                  | SSFN / #{current_page.data.category}
+          .col-md-10
+            .row
+              .col-sm-8.col-md-12.col-lg-12.col-xl-7
+                h1
+                  = current_article.title
+  .site-block.site-block-journal
+    .container-wrap
+      .container-fluid
+        .row
+          .col-md-10.offset-md-1
+            .row.d-flex
+              .col-md-4.order-md-1
+                aside.journal-aside
+                  header.journal-aside-header
+                    h5 Contributors
+                  main.journal-aside-main
+                    .journal-contributors
+                      - current_article.data.authors.each do |a|
+                        .journal-contributors-person
+                          .journal-contributors-img
+                            img alt=("#{a.name}") src="../../images/contributors/#{a.slug}.png" /
+                          .journal-contributors-meta
+                            h6.journal-contributors-name #{a.name}
+                            a.journal-contributors-link href="#{a.socialplat}/#{a.socialname}" 
+                              | @#{a.socialname}
+                aside.journal-aside
+                  header.journal-aside-header
+                    h5 Share
+                  main.journal-aside-main
+                    #journal-share.journal-share
+              .col-md-8.order-md-0
+                .journal-intro
+                  = current_article.data.intro
+            .row
+              .col-12
+                = yield
+            .row
+              .col-md-7
+                .journal-authors
+                  h4 About the author(s)
+                  p 
+                    | <a href="#">Chris Porter</a> is a partner, designer & developer at SSFN & Forces Unite; <a href="#">Maryy Cho</a> is a designer and part of the collective, Forces Unite; <a href="#">Stephen Miller</a> is a partner, designer & photographer at SSFN, District Photography & Locale Workspace.
+            .row
+              .col-12
+                .journal-subscribe
+                  header.journal-subscribe-header
+                    h4 Learn how to improve your business & prepare for the automation age.
+                  main.journal-subscribe-main
+                    form.journal-subscribe-form action="#"
+                      fieldset.journal-subscribe-fieldset
+                        input.journal-subscribe-email type="text" placeholder="Enter your email to subscribe today!"
+                        input.btn.btn-primary.journal-subscribe-submit type="submit" value="Subscribe"
+
+  .site-block.site-block-6-6.site-block-dark
+    .container-wrap
+      .container-fluid
+        .row
+          .col-md-10.offset-md-1
+            .row
+              .col-12
+                header.site-block-header
+                  h2 Up next
+              .col-sm-6
+                .card.card-journal style="background-image: url('');"
+                  .card-inner
+                    h4 Why you’ll need a website, even if you have social media & local directories?
+                    = link_to "Read This", "/", :class => "btn btn-secondary"
+              .col-sm-6
+                .card.card-journal style="background-image: url('');"
+                  .card-inner
+                    h4 Should you use site building platforms, custom build or a little bit of both?
+                    = link_to "Read This", "/", :class => "btn btn-secondary"

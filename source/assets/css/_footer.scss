@@ -1,0 +1,21 @@
+.site-footer-nav {
+  height: 60px;
+  @include flexbox;
+  align-items: center;
+}
+.site-footer-nav-list {
+  @include no-list;
+  @include flexbox;
+}
+.site-footer-nav-ele {
+  margin: 0 $space-medium 0 0;
+  @media (min-width: $mq-tablet) {
+    margin: 0 0 0 $space-medium;
+  }
+}
+.site-footer-nav-social {
+  margin: $space-small 0 0 0;
+  @media (min-width: $mq-tablet) {
+    margin: 0;
+  }
+}

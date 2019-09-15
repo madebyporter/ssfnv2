@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "normalize";
+@import "bootstrap";
+@import "mixins";
+@import "variables";
+@import "type";
+@import "components";
+@import "header";
+@import "footer";
+@import "blocks";
+@import "cases";
+@import "journal";
+
+html {
+}
+body {
+}
+.container-wrap {
+  width: 100%;
+  @media (min-width: $mq-laptop) {
+    padding: 0 $space-large;
+  }
+}
+.site-main {
+  @media (min-width: $mq-laptop) {
+    
+  }
+}

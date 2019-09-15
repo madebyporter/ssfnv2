@@ -1,0 +1,16 @@
+.site-block {
+  padding: $space-large 0 $space-medium 0;
+  @media (min-width: $mq-laptop) {
+    padding: $space-xl 0 $space-large 0;
+  }
+}
+.site-block-hero {
+  background: #f9f9f9;
+  @include flexbox;
+  align-items: flex-end;
+  height: 540px;
+  padding: 0 0 $space-large 0;
+}
+.site-block-header {
+  margin: 0 0 $space-medium;
+}

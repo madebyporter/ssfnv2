@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta charset="utf-8"
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+
+    title = current_page.data.title || "SSFN, a venture agency that builds for the future."
+
+    link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'
+
+    == stylesheet_link_tag :site
+    == javascript_include_tag  "jquery", "noframework.waypoints", "jssocials.min", "all"
+    script src="https://kit.fontawesome.com/efbb4f5eeb.js"
+
+  body class="#{page_classes}"
+    header#masthead.site-header
+      .container-wrap
+        .container-fluid
+          .row
+            .col-sm-2.col-md-1
+              .site-header-logo
+                = link_to "/", :class => "site-header-logo-link" do
+                  = image_tag "header-logo.svg", :alt => "SSFN Logo", :class => "site-header-logo-img"
+            .col-md-10
+              nav.site-header-nav
+                ul.site-header-nav-list
+                  li.site-header-nav-ele
+                    a.site-header-nav-link href="projects" Projects
+                  li.site-header-nav-ele
+                    a.site-header-nav-link href="whoweare" Who We Are
+                  li.site-header-nav-ele
+                    a.site-header-nav-link href="journal" Journal
+                  li.site-header-nav-ele
+                    a.site-header-nav-link href="contact" Contact Us
+    main.site-main
+      == yield
+    footer.site-block.site-block-footer
+      .container-wrap
+        .container-fluid
+          .row
+            .col-md-10.offset-md-1
+              .row
+                .col-12
+                  h3 Get in touch
+              .row
+                .col-12
+                  .headline-light
+                    = link_to "connect@ssfn.io", "mailto:connect@ssfn.io"
+              .row
+                .col-md-6
+                  p.small Copyright &copy; 2019. All Rights Reserved.
+                .col-md-6.d-flex.justify-content-md-end
+                  nav.site-footer-nav-social
+                    ul.site-footer-nav-list
+                      li.site-footer-nav-ele
+                        = link_to "/", :class => "site-footer-nav-link" do
+                          = image_tag "icons/icon-social-dribbble.svg", :alt => "Dribbble", :class => "site-footer-nav-img"
+                      li.site-footer-nav-ele
+                        = link_to "/", :class => "site-footer-nav-link" do
+                          = image_tag "icons/icon-social-instagram.svg", :alt => "Instagram", :class => "site-footer-nav-img"
+                      li.site-footer-nav-ele
+                        = link_to "/", :class => "site-footer-nav-link" do
+                          = image_tag "icons/icon-social-twitter.svg", :alt => "Twitter", :class => "site-footer-nav-img"
+    #functionMenuTrigger.function-menu-trigger
+      .function-menu-trigger-inner
+        = image_tag "icon-menu-trigger.svg", :alt => "Trigger Menu", :class => "function-menu-trigger-img"
