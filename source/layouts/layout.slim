@@ -26,13 +26,13 @@ html
               nav.site-header-nav
                 ul.site-header-nav-list
                   li.site-header-nav-ele
-                    a.site-header-nav-link href="projects" Projects
+                    = link_to "Projects", "/projects", :class => "site-header-nav-link"
                   li.site-header-nav-ele
-                    a.site-header-nav-link href="whoweare" Who We Are
+                    = link_to "Who We Are", "/whoweare", :class => "site-header-nav-link"
                   li.site-header-nav-ele
-                    a.site-header-nav-link href="journal" Journal
+                    = link_to "Journal", "/journal", :class => "site-header-nav-link"
                   li.site-header-nav-ele
-                    a.site-header-nav-link href="contact" Contact Us
+                    = link_to "Contact Us", "/contact", :class => "site-header-nav-link"
     main.site-main
       == yield
     footer.site-block.site-block-footer

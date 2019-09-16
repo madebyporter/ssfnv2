@@ -3,7 +3,8 @@
 title: Why small businesses still need a website
 date: 2019-09-15 21:01 UTC
 category: The Basics
-tags: 
+tags:
+teaser:
 authors:
 - name: Chris Porter
   slug: chrisporter
@@ -17,6 +18,8 @@ authors:
   slug: stephenmiller
   socialplat: https://www.instagram.com/
   socialname: stephenlamiller
+about_authors: 
+  <a href="#">Chris Porter</a> is a partner, designer & developer at SSFN & Forces Unite; <a href="#">Maryy Cho</a> is a designer and part of the collective, Forces Unite; <a href="#">Stephen Miller</a> is a partner, designer & photographer at SSFN, District Photography & Locale Workspace.
 intro: 
   <p>You’re a small business with an online presence consisting of social media, online publishing and directory platforms. That should cover your basis, right?</p>
 

@@ -49,7 +49,7 @@
                 .journal-authors
                   h4 About the author(s)
                   p 
-                    | <a href="#">Chris Porter</a> is a partner, designer & developer at SSFN & Forces Unite; <a href="#">Maryy Cho</a> is a designer and part of the collective, Forces Unite; <a href="#">Stephen Miller</a> is a partner, designer & photographer at SSFN, District Photography & Locale Workspace.
+                    = current_article.data.about_authors
             .row
               .col-12
                 .journal-subscribe
@@ -70,13 +70,18 @@
               .col-12
                 header.site-block-header
                   h2 Up next
-              .col-sm-6
-                .card.card-journal style="background-image: url('');"
-                  .card-inner
-                    h4 Why you’ll need a website, even if you have social media & local directories?
-                    = link_to "Read This", "/", :class => "btn btn-secondary"
-              .col-sm-6
-                .card.card-journal style="background-image: url('');"
-                  .card-inner
-                    h4 Should you use site building platforms, custom build or a little bit of both?
-                    = link_to "Read This", "/", :class => "btn btn-secondary"
+            .row.d-flex
+              - previous_article = current_article.previous_article
+              - if previous_article
+                .col
+                  .card.card-journal style="background-image: url('journal/images/#{previous_article.data.teaser}.jpg');"
+                    .card-inner
+                      h4 = previous_article.title
+                      = link_to "Read This", "#{previous_article.url}", :class => "btn btn-secondary"
+              - next_article = current_article.next_article
+              - if next_article
+                .col
+                  .card.card-journal style="background-image: url('journal/images/#{next_article.data.teaser}.jpg');"
+                    .card-inner
+                      h4 = next_article.title
+                      = link_to "Read This", "#{next_article.url}", :class => "btn btn-secondary"
