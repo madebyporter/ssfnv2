@@ -9,6 +9,7 @@ js.main = {
     // this.cookiesAlert();
     this.externalLinks();
     this.functionMenu();
+    this.masonry();
     this.waypointsHeader();
     this.journalShare();
   },
@@ -39,6 +40,16 @@ js.main = {
       } else {
         $('body').addClass('menuOpen');
       }
+    });
+  },
+  masonry: function() {
+    var $grid = $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+      percentPosition: true,
+    });
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
     });
   },
   waypointsHeader: function() {

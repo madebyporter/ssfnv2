@@ -1,0 +1,13 @@
+.project-listing
+  - blog('projects').articles[0...5].each do |article|
+    .row
+      .col-md-10.offset-md-1
+        .row.d-flex
+          .project-listing-col.col-sm-6
+            = image_tag "projects/project-#{article.data.slug}-teaser.png", :alt => "#{article.data.client}", :class => "case-home-img-teaser"
+          .project-listing-col.col-sm-6
+            .case-home-content-teaser
+              h3 #{article.data.client}
+              p #{article.data.year}  / #{article.data.type}
+              p #{article.data.tagline}
+              = link_to "Read Case Study", "#{article.url}", :class => "cta-default"

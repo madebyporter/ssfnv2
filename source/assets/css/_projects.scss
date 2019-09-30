@@ -1,0 +1,70 @@
+// Projects
+  .project-listing {
+    & > .row {
+      margin-bottom: $space-medium;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:nth-child(odd) {
+        @media (min-width: $mq-phonexl) {
+          .project-listing-col:nth-child(1) {
+            order: 2;
+          }
+          .project-listing-col:nth-child(2) {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+  .projects-imagery.grid {
+    @media (min-width: $mq-phonexl) {
+      margin-left: -$space-small;
+      margin-right: -$space-small;
+    }
+    // width: 100%;
+  }
+  .projects-imagery-img {
+    &.grid-item, &.grid-sizer {
+      width: 100%;
+      @media (min-width: $mq-phonexl) {
+        width: 50%;
+      }
+    }
+    &.grid-item--width2 { 
+      width: 100%; 
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .projects-imagery-img-inner {
+    padding-bottom: $space-small;
+    @media (min-width: $mq-phonexl) {
+      padding: $space-small;
+    }
+  }
+  .projects-imagery-main {
+    max-height: 400px;
+    margin-top: -120px;
+    margin-bottom: $space-medium;
+    overflow: hidden;
+    @media (min-width: $mq-tablet) {
+      max-height: none;
+      margin-top: -$space-large;
+      margin-bottom: 0;
+      overflow: visible;
+    }
+  }
+  .projects-imagery-main-inner {
+    @media (min-width: $mq-tablet) {
+      padding: $space-small;
+    }
+    img {
+      width: 100%;
+      @media (min-width: $mq-tablet) {
+        border: $space-small solid $color-black-0;
+        width: auto;
+      }
+    }
+  }

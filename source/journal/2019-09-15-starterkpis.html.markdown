@@ -4,7 +4,7 @@ title: What are some starter KPIs for websites?
 date: 2019-09-15 00:25 UTC
 category: KPIs and Analytics
 tags:
-teaser:
+teaserimg:
 authors:
 - name: Chris Porter
   slug: chrisporter

@@ -1,0 +1,8 @@
+.journal-listing
+  .row.d-flex
+    - blog('journal').articles[0...5].each do |article|
+      .col-md-6.flex-sm-grow-1
+        .card.card-journal style="background-image: url('journal/images/#{article.data.teaserimg}.jpg')"
+          .card-inner
+            h4 = article.title
+            = link_to "Read This", "#{article.url}", :class => "btn btn-secondary"

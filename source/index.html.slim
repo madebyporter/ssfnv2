@@ -31,30 +31,8 @@ title: Home
   .container-wrap
     .container-fluid
       .row
-        .col-md-10.offset-md-1
-          .row.d-flex
-            .col-sm-6.order-sm-2
-              = image_tag "cases/case-myfdtps-teaser.png", :alt => "MyFDTPS Logo", :class => "case-home-img-teaser"
-            .col-sm-6.order-sm-1
-              .case-home-content-teaser
-                h3 MyFDTPS.com
-                p 2018  / Web Redesign
-                p Rebuilding a foundation from the ground up.
-                = link_to "Read Case Study", "/", :class => "cta-default"
-.site-block.site-block-6-6
-  .container-wrap
-    .container-fluid
-      .row
-        .col-md-10.offset-md-1
-          .row.d-flex
-            .col-sm-6.order-sm-1
-              = image_tag "cases/case-wearehoward-teaser.png", :alt => "We Are Howard Logo", :class => "case-home-img-teaser"
-            .col-sm-6.order-sm-2
-              .case-home-content-teaser
-                h3 We Are Howard
-                p 2018  / Logo Design
-                p Changing the way alumni give.
-                = link_to "Read Case Study", "/", :class => "cta-default"
+        .col-12
+          = partial "/partials/project-listing"
 .site-block.site-block-6-6.site-block-dark
   .container-wrap
     .container-fluid
@@ -66,13 +44,6 @@ title: Home
                 h2 Latest from the Journal
                 p We love to help in many ways, including educating and providing insights to our clients.
                 = link_to "Read our Journal", "/journal", :class => "cta-default"
-            .col-sm-6
-              .card.card-journal style="background-image: url('');"
-                .card-inner
-                  h4 Why you’ll need a website, even if you have social media & local directories?
-                  = link_to "Read This", "/", :class => "btn btn-secondary"
-            .col-sm-6
-              .card.card-journal style="background-image: url('');"
-                .card-inner
-                  h4 Should you use site building platforms, custom build or a little bit of both?
-                  = link_to "Read This", "/", :class => "btn btn-secondary"
+          .row
+            .col-12
+              = partial "/partials/journal-listing"

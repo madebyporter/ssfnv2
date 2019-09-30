@@ -1,5 +1,6 @@
 ---
 title: Journal
+blog: journal
 ---
 .site-block.site-block-hero
   .container-wrap
@@ -24,10 +25,6 @@ title: Journal
             .col-12
               header.site-block-header
                 p We love to help in many ways, including educating and providing insights to our clients.
-          .row.d-flex
-            - blog.articles[0...5].each do |article|
-              .col-md-6.flex-sm-grow-1
-                .card.card-journal style="background-image: url('journal/images/#{article.data.teaser}.jpg');"
-                  .card-inner
-                    h4 = article.title
-                    = link_to "Read This", "#{article.url}", :class => "btn btn-secondary"
+          .row
+            .col-12
+              = partial "/partials/journal-listing"

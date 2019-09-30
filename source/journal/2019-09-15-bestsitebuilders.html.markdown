@@ -4,7 +4,7 @@ title: Let's review the best DIY website builders
 date: 2019-09-15 00:24 UTC
 category: Development
 tags:
-teaser:
+teaserimg:
 authors:
 - name: Chris Porter
   slug: chrisporter

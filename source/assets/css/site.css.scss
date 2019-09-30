@@ -10,10 +10,12 @@
 @import "blocks";
 @import "cases";
 @import "journal";
+@import "projects";
 
 html {
 }
 body {
+  overflow-x: hidden;
 }
 .container-wrap {
   width: 100%;

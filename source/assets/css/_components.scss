@@ -1,21 +1,32 @@
-.btn {
-  border-radius: 0;
-  @extend .t-16;
-  padding: $space-x $space-small;
-}
-
-.card {
-  padding: $space-medium;
-  @include flexbox;
-  justify-content: flex-end;
-}
-.card-inner {
-  height: auto;
-}
-.card-journal {
-  height: 300px;
-  margin: 0 0 $space-small 0;
-  @media (min-width: $mq-laptop) {
-    height: 500px;
+// Buttons
+  .btn {
+    border-radius: 0;
+    @extend .t-16;
+    padding: $space-x $space-small;
   }
-}
+
+// Cards
+  .card {
+    padding: $space-medium;
+    @include flexbox;
+    justify-content: flex-end;
+  }
+  .card-inner {
+    height: auto;
+  }
+  .card-journal {
+    height: 300px;
+    margin: 0 0 $space-small 0;
+    @media (min-width: $mq-laptop) {
+      height: 500px;
+    }
+  }
+
+  // Content
+    .content-section {
+      margin: 0 0 $space-medium 0;
+
+      p {
+        margin: 0 0 $space-small 0;
+      }
+    }

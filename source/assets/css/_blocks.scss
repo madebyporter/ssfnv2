@@ -8,8 +8,11 @@
   background: #f9f9f9;
   @include flexbox;
   align-items: flex-end;
-  height: 540px;
+  height: 450px;
   padding: 0 0 $space-large 0;
+  @media (min-width: $mq-tablet) {
+    height: 540px;
+  }
 }
 .site-block-header {
   margin: 0 0 $space-medium;

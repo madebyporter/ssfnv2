@@ -4,7 +4,7 @@ title: Why small businesses still need a website
 date: 2019-09-15 21:01 UTC
 category: The Basics
 tags:
-teaser:
+teaserimg:
 authors:
 - name: Chris Porter
   slug: chrisporter

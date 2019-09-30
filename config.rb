@@ -27,9 +27,9 @@ page '/*.txt', layout: false
 ###
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -41,10 +41,21 @@ page '/*.txt', layout: false
 activate :directory_indexes
 
 activate :blog do |blog|
+  blog.name = "journal"
   blog.prefix = "journal"
-  blog.permalink = "{category}/{title}.html"
+  blog.permalink = "{category}/{title}"
   blog.layout = "journal_layout"
   blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
+  blog.default_extension = ".markdown.slim"
+end
+
+activate :blog do |blog|
+  blog.name = "projects"
+  blog.prefix = "projects"
+  blog.permalink = "{category}/{title}"
+  blog.layout = "projects_layout"
+  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
+  blog.default_extension = ".markdown.slim"
 end
 
 # Build-specific configuration

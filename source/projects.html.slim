@@ -19,27 +19,5 @@ title: Projects
   .container-wrap
     .container-fluid
       .row
-        .col-md-10.offset-md-1
-          .row.d-flex
-            .col-sm-6.order-sm-2
-              = image_tag "cases/case-myfdtps-teaser.png", :alt => "MyFDTPS Logo", :class => "case-home-img-teaser"
-            .col-sm-6.order-sm-1
-              .case-home-content-teaser
-                h3 MyFDTPS.com
-                p 2018  / Web Redesign
-                p Rebuilding a foundation from the ground up.
-                = link_to "Read Case Study", "/", :class => "cta-default"
-.site-block.site-block-6-6
-  .container-wrap
-    .container-fluid
-      .row
-        .col-md-10.offset-md-1
-          .row.d-flex
-            .col-sm-6.order-sm-1
-              = image_tag "cases/case-wearehoward-teaser.png", :alt => "We Are Howard Logo", :class => "case-home-img-teaser"
-            .col-sm-6.order-sm-2
-              .case-home-content-teaser
-                h3 We Are Howard
-                p 2018  / Logo Design
-                p Changing the way alumni give.
-                = link_to "Read Case Study", "/", :class => "cta-default"
+        .col-12
+          = partial "/partials/project-listing"
