@@ -24,7 +24,7 @@
               .col-12.col-md-6.order-1.order-md-2
                 .projects-imagery-main
                   .projects-imagery-main-inner
-                    = image_tag "projects/#{current_article.data.slug}/project-#{current_article.data.slug}-imagery-#{current_page.data.imagery_main}.jpg", :alt => "#{current_article.data.client}"
+                    = image_tag "projects/#{current_article.data.slug}/project-#{current_article.data.slug}-imagery-#{current_page.data.imagery_main}", :alt => "#{current_article.data.client}"
   .site-block.site-block-projects-imagery style="background-color: ##{current_page.data.bgcolor}"
     .container-wrap
       .container-fluid
@@ -34,7 +34,7 @@
               - current_article.data.imagery.each do |img|
                 .projects-imagery-img class="#{img.gridtype}"
                   .projects-imagery-img-inner
-                    = image_tag "projects/#{current_article.data.slug}/project-#{current_article.data.slug}-imagery-#{img.img}.jpg", :alt => "#{current_article.data.client}"
+                    = image_tag "projects/#{current_article.data.slug}/project-#{current_article.data.slug}-imagery-#{img.img}", :alt => "#{current_article.data.client}"
 
   .site-block.site-block-6-6.site-block-dark
     .container-wrap

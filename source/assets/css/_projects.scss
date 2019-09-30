@@ -17,6 +17,14 @@
       }
     }
   }
+  .projects-testimonial {
+
+  }
+  .projects-testimonial-image {
+    margin: 0 0 $space-small 0;
+    width: 100%;
+  }
+  
   .projects-imagery.grid {
     @media (min-width: $mq-phonexl) {
       margin-left: -$space-small;
