@@ -7,61 +7,35 @@ html
 
     title = current_page.data.title || "SSFN, a venture agency that builds for the future."
 
-    link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'
+    link rel="preconnect" href="https://fonts.googleapis.com"
+    link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"
+    link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet"
 
     == stylesheet_link_tag :site
-    == javascript_include_tag  "jquery", "noframework.waypoints", "jssocials.min", "masonry.pkgd.min.js", "imagesloaded.pkgd.min.js", "all"
-    script src="https://kit.fontawesome.com/efbb4f5eeb.js"
+    == javascript_include_tag  "jquery", "all"
 
   body class="#{page_classes}"
     header#masthead.site-header
-      .container-wrap
-        .container-fluid
-          .row
-            .col-sm-2.col-md-1
-              .site-header-logo
-                = link_to "/", :class => "site-header-logo-link" do
-                  = image_tag "header-logo.svg", :alt => "SSFN Logo", :class => "site-header-logo-img"
-            .col-md-10
-              nav.site-header-nav
-                ul.site-header-nav-list
-                  li.site-header-nav-ele
-                    = link_to "Projects", "/projects", :class => "site-header-nav-link"
-                  li.site-header-nav-ele
-                    = link_to "Who We Are", "/whoweare", :class => "site-header-nav-link"
-                  li.site-header-nav-ele
-                    = link_to "Journal", "/journal", :class => "site-header-nav-link"
-                  li.site-header-nav-ele
-                    = link_to "Contact Us", "/contact", :class => "site-header-nav-link"
+      .container-fluid
+        .row
+          .col-5
+            .site-header-logo
+              = link_to "/", :class => "site-header-logo-link" do
+                = image_tag "ssfn-logo-black.svg", :alt => "SSFN Logo", :class => "site-header-logo-img"
+          .col-7
+            = partial "/partials/nav"    
     main.site-main
       == yield
     footer.site-block.site-block-footer
-      .container-wrap
-        .container-fluid
-          .row
-            .col-md-10.offset-md-1
-              .row
-                .col-12
-                  h3 Get in touch
-              .row
-                .col-12
-                  .headline-light
-                    = link_to "connect@ssfn.io", "mailto:connect@ssfn.io"
-              .row
-                .col-md-6
-                  p.small Copyright &copy; 2019. All Rights Reserved.
-                .col-md-6.d-flex.justify-content-md-end
-                  nav.site-footer-nav-social
-                    ul.site-footer-nav-list
-                      li.site-footer-nav-ele
-                        = link_to "/", :class => "site-footer-nav-link" do
-                          = image_tag "icons/icon-social-dribbble.svg", :alt => "Dribbble", :class => "site-footer-nav-img"
-                      li.site-footer-nav-ele
-                        = link_to "/", :class => "site-footer-nav-link" do
-                          = image_tag "icons/icon-social-instagram.svg", :alt => "Instagram", :class => "site-footer-nav-img"
-                      li.site-footer-nav-ele
-                        = link_to "/", :class => "site-footer-nav-link" do
-                          = image_tag "icons/icon-social-twitter.svg", :alt => "Twitter", :class => "site-footer-nav-img"
-    #functionMenuTrigger.function-menu-trigger
-      .function-menu-trigger-inner
-        = image_tag "icon-menu-trigger.svg", :alt => "Trigger Menu", :class => "function-menu-trigger-img"
+      .container-fluid
+        .row
+          .col-lg-6
+            p.small.mb-0 Copyright &copy; 2019. All Rights Reserved.
+          .col-lg-6.d-flex.justify-content-md-end
+            nav.site-footer-nav-social
+              = link_to "/", :class => "site-footer-nav-link" do
+                = image_tag "icons/icon-social-dribbble.svg", :alt => "Dribbble", :class => "site-footer-nav-img"
+              = link_to "/", :class => "site-footer-nav-link" do
+                = image_tag "icons/icon-social-instagram.svg", :alt => "Instagram", :class => "site-footer-nav-img"
+              = link_to "/", :class => "site-footer-nav-link" do
+                = image_tag "icons/icon-social-twitter.svg", :alt => "Twitter", :class => "site-footer-nav-img"

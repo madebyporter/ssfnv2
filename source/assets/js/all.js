@@ -8,10 +8,6 @@ js.main = {
   init: function () {
     // this.cookiesAlert();
     this.externalLinks();
-    this.functionMenu();
-    this.masonry();
-    this.waypointsHeader();
-    this.journalShare();
   },
   cookiesAlert: function() {
     window.addEventListener("load", function(){

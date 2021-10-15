@@ -3,47 +3,196 @@ title: Home
 ---
 
 .site-block.site-block-hero
-  .container-wrap
-    .container-fluid
-      .row
-        .col-md-1
-          .site-header-pagetitle
-            .site-header-pagetitle-rotate
-              .site-header-pagetitle-text
-                | SSFN / #{current_page.data.title}
-        .col-md-10
-          .row
-            .col-sm-8.col-md-12.col-lg-12.col-xl-7
-              h1.headline
-                | Building for the future
-          
-.site-block.site-block-12
-  .container-wrap
-    .container-fluid
-      .row
-        .col-md-10.offset-md-1
-          .row
-            .col-md-12
-              p Hello there,
-              h2 We’re an agency that builds brands & digital systems for future-focused businesses.
-              = link_to "Learn About Us", "/", :class => "cta-default"
-.site-block.site-block-6-6
-  .container-wrap
-    .container-fluid
-      .row
-        .col-12
-          = partial "/partials/project-listing"
-.site-block.site-block-6-6.site-block-dark
-  .container-wrap
-    .container-fluid
-      .row
-        .col-md-10.offset-md-1
-          .row
-            .col-12
-              header.site-block-header
-                h2 Latest from the Journal
-                p We love to help in many ways, including educating and providing insights to our clients.
-                = link_to "Read our Journal", "/journal", :class => "cta-default"
-          .row
-            .col-12
-              = partial "/partials/journal-listing"
+  .container-fluid
+    .row
+      .col-12.col-lg-8.offset-lg-1
+        h1.h1
+          | We help people &amp; brands level up their web systems.
+#why.site-block
+  .container-fluid
+    .row
+      .col-12.col-lg-3.offset-lg-1.col-xl-3
+        h2.t-smallcap
+          | Why you'll need our help?
+      .col-12.col-lg-4.offset-lg-1
+        h3.h3
+          | You’re here because your business is using an old web system that’s not helping you anymore.
+        p.t-24
+          | You’re looking to invest in your future. A goal for a web-based system that’s simple, scalable & sustainable.
+.site-block
+  .container-fluid
+    .row
+      .col-12.col-lg-2.offset-lg-1.col-xl-2
+        h2.t-smallcap
+          | What does Our team specialize in?
+    .row
+      .col-12
+        .group-vector.group-vector--specializations
+          .vector.vector-device--mobile
+            = image_tag "vector-mobile.svg", :alt => "Mobile", :class => "vector-img"
+            span.vector-caption Mobile Apps
+          .vector.vector-device--tablet
+            = image_tag "vector-tablet.svg", :alt => "Mobile", :class => "vector-img"
+            span.vector-caption e-Commerce
+          .vector.vector-device--laptop
+            = image_tag "vector-laptop.svg", :alt => "Mobile", :class => "vector-img"
+            span.vector-caption Marketing Websites
+          .vector.vector-device--desktop
+            = image_tag "vector-desktop.svg", :alt => "Mobile", :class => "vector-img"
+            span.vector-caption Web Software
+#how.site-block.pb-0
+  .container-fluid
+    .row
+      .col-12.col-lg-3.offset-lg-1.col-xl-3
+        h2.t-smallcap
+          | How do we do Things?
+.site-block.p-0
+  .container-fluid
+    .row
+      .col-12
+        .slider
+          .slider-track
+            .slider-block
+              h3.slider-header
+                | Discover
+              p.slider-content
+                | Before we go deep into a rebuild, we’ll need to learn about your current business & problems. We’ll propose a solution that  you can take home.
+              aside.slider-aside
+                | Starting at $5,000  /  1-3 Months
+            .slider-block
+              h3.slider-header
+                | Discover
+              p.slider-content
+                | Before we go deep into a rebuild, we’ll need to learn about your current business & problems. We’ll propose a solution that  you can take home.
+              aside.slider-aside
+                | Starting at $5,000  /  1-3 Months
+            .slider-block
+              h3.slider-header
+                | Discover
+              p.slider-content
+                | Before we go deep into a rebuild, we’ll need to learn about your current business & problems. We’ll propose a solution that  you can take home.
+              aside.slider-aside
+                | Starting at $5,000  /  1-3 Months
+.site-block.px-0
+  .container-fluid
+    .row
+      .col-12
+        .marquee
+          .marquee-content.t-144
+            | Ready to work? Ready to work? Ready to work? Ready to work? Ready to work? Ready to work? Ready to work? Ready to work?
+        p.text-center
+          = link_to "connect@ssfn.io", "mailto:connect@ssfn.io", :class => "t-72 d-inline-block"
+#projects.site-block.px-0
+  .container-fluid
+    .row
+      .col-12.col-lg-2.offset-lg-1.col-xl-2
+        h2.t-smallcap
+          | Our Projects
+    .row
+      .col-12.col-lg-7.offset-lg-5 
+        .box.box-blue
+          .box-content
+            .row
+              .col-2
+                .group-vector
+                  .vector
+                    = image_tag "vector-mobile.svg", :alt => "Mobile", :class => "vector-img"
+                  .vector
+                    = image_tag "vector-desktop.svg", :alt => "Mobile", :class => "vector-img"
+            .row
+              .col-12.col-lg-8
+                h3.h3
+                  | Faithful Homes
+                p
+                  | We work with Faithul Homes, a company that helps people with disabilities get to work, digitize their business processes.
+                span
+                  | Live Case Coming Soon
+    .row
+      .col-12.col-lg-7
+        .box.box-blue style="margin-top: -4rem;"
+          .box-content
+            .row
+              .col-2
+                .group-vector
+                  .vector
+                    = image_tag "vector-mobile.svg", :alt => "Mobile", :class => "vector-img"
+                  .vector
+                    = image_tag "vector-desktop.svg", :alt => "Mobile", :class => "vector-img"
+            .row
+              .col-12.col-lg-8
+                h3.h3
+                  | Forces Unite
+                p
+                  | Our community of creative freelancers & solopreneurs that we help provide experience, guidance and resources.
+                span
+                  | Community coming soon
+.site-block.px-0
+  .container-fluid
+    .row style="border-bottom: 1px solid black"
+      .col-12.col-lg-2.offset-lg-1.col-xl-2
+        h2.t-smallcap
+          | Some Q&A
+    .row.pt-5
+      .col-12.col-lg-3.offset-lg-1
+        h3.h3
+          | What type of clients you work with?
+      .col-12.col-lg-5.offset-lg-1
+        ul.my-0
+          li Your revenue is north of $100k
+          li Clients who are looking for the best results, not the lowest price. 
+          li We love to work with brands who do their homework on us and likes our work
+          li We love small to medium companies with flexible contractual terms.
+          li You’re into remote teams and don’t need anyone local or on sync.
+          li You need strategy first, production second. If you already have a plan, we’ll won’t be as valuable to you.
+#team.site-block.pb-0
+  .container-fluid
+    .row
+      .col-12.col-lg-3.offset-lg-1.col-xl-3
+        h2.t-smallcap
+          | Our Team
+    .row 
+      .col-12.col-lg-4.offset-lg-1
+        h3.h3
+          | We’re a designer-led collective that comes together to build things.
+      .col-12.col-lg-5
+        p
+          | During the discovery to production phases, we build a contracted team based on projects needs.
+.site-block.p-0
+  .container-fluid
+    .row
+      .col-12
+        .slider
+          .slider-track
+            .slider-block.slider-block-center
+              .slider-img
+              h3.slider-header
+                | Stephen Miller
+              p.slider-content
+                | Partner, Photographer & Designer
+              aside.slider-aside
+                = link_to "stephenlamiller.com", "https://stephenlamiller.com", :class => ""
+            .slider-block.slider-block-center
+              .slider-img
+              h3.slider-header
+                | Chris Porter
+              p.slider-content
+                | Partner & Design Engineer
+              aside.slider-aside
+                = link_to "madebyporter.com", "https://madebyporter.com", :class => ""
+            .slider-block.slider-block-center
+              .slider-img
+              h3.slider-header
+                | Forces Unite
+              p.slider-content
+                | Our collective of designers, engineers, photographers, musicians & strategists.
+              aside.slider-aside
+                = link_to "forcesunite.us", "https://forcesunite.us", :class => ""
+#contact.site-block.px-0
+  .container-fluid
+    .row
+      .col-12
+        .marquee
+          .marquee-content.t-144
+            | Ready to work? Ready to work? Ready to work? Ready to work? Ready to work? Ready to work? Ready to work? Ready to work?
+        p.text-center
+          = link_to "connect@ssfn.io", "mailto:connect@ssfn.io", :class => "t-72 d-inline-block"

@@ -3,6 +3,7 @@
 @import "bootstrap";
 @import "mixins";
 @import "variables";
+@import "utility";
 @import "type";
 @import "components";
 @import "header";
@@ -17,11 +18,9 @@ html {
 body {
   overflow-x: hidden;
 }
-.container-wrap {
-  width: 100%;
-  @media (min-width: $mq-laptop) {
-    padding: 0 $space-large;
-  }
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 .site-main {
   @media (min-width: $mq-laptop) {

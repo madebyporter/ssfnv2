@@ -1,142 +1,30 @@
 .site-header {
-  height: 125px;
-  padding: $space-medium 0;
-  position: fixed;
-  width: 100%;
+  height: 60px;
+  left: 0;
+  padding: $space-small;
+  position: absolute;
+  right: 0;
   @include transition;
   z-index: 100;
-  &:before {
-    background: #f5f5f5;
-    content: "";
-    height: 125px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    @include transition;
+  @media (min-width: $mq-tablet) {
+    position: fixed;
   }
 }
 .site-header-logo {
   @include flexbox;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   height: 100%;
+  @media (min-width: $mq-tablet) {
+    align-items: center;
+  }
 }
 .site-header-logo-link {
   display: block;
   height: auto;
-  width: 46px;
-  @media (min-width: $mq-tablet) {
-    margin: 0 auto;
-  }
+  width: 128px;
 }
 .site-header-logo-img {
   height: auto;
-  width: 100%;
-}
-.site-header-nav {
-  @media (max-width: $mq-tablet) {
-    background: $color-white;
-    height: 100%;
-    left: 100%;
-    padding: $space-medium;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    @include transition;
-    @include translate(0,0);
-  }
-  height: 60px;
-  @include flexbox;
-  align-items: center;
-}
-.site-header-nav-list {
-  @media (max-width: $mq-tablet) {
-    @include flex-wrap(wrap);
-    width: 100%;
-  }
-  @include no-list;
-  @include flexbox;
-}
-.site-header-nav-ele {
-  @media (max-width: $mq-tablet) {
-    margin: 0 0 0 0;
-    padding: $space-small 0;
-    text-align: right;
-    width: 100%;
-  }
-  margin: 0 $space-medium 0 0;
-}
-.site-header-pagetitle {
-  display: none;
-  @media (min-width: $mq-tablet) {
-    @include flexbox;
-    align-items: flex-start;
-    justify-content: center;
-    margin: -5rem 0 0 0;
-    width: 100%;
-    height: auto;
-  }
-}
-.site-header-pagetitle-rotate {
-  @media (min-width: $mq-tablet) {
-    height: 54px;
-    width: 54px;
-    @include rotate(-90);
-    transform-origin: center;
-  }
-}
-.site-header-pagetitle-text {
-  height: 20px;
-  width: 100%;
-  @media (min-width: $mq-tablet) {
-    height: 100%;
-    text-align: right;
-    white-space: nowrap;
-    @include flexbox;
-    align-items: center;
-    justify-content: flex-end;
-  } 
-}
-
-.menuOpen {
-  overflow: hidden;
-  .site-header-nav {
-    @media (max-width: $mq-tablet) {
-      @include translate(-100%,0);
-    }
-  }
-}
-
-.fold {
-  .site-header {
-    padding: 0;
-    &:before {
-      height: 60px;
-    }
-  }
-}
-
-.function-menu-trigger {
-  @media (max-width: $mq-tablet) {
-    align-items: center;
-    background: $color-white;
-    bottom: $space-small;
-    @include flexbox;
-    cursor: pointer;
-    justify-content: center;
-    padding: $space-small;
-    position: fixed;
-    right: $space-small;
-    z-index: 400;
-  }
-  display: none;
-}
-.function-menu-trigger-inner {
-  width: 20px;
-  height: 20px;
-}
-.function-menu-trigger-img {
-  height: 100%;
   width: 100%;
 }

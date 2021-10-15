@@ -1,19 +1,19 @@
 .site-block {
-  padding: $space-large 0 $space-medium 0;
-  @media (min-width: $mq-laptop) {
-    padding: $space-xl 0 $space-large 0;
-  }
+  padding: $space-large $space-small;
 }
 .site-block-hero {
   background: #f9f9f9;
   @include flexbox;
   align-items: flex-end;
-  height: 450px;
-  padding: 0 0 $space-large 0;
+  height: 80vh;
+  padding: $space-small;
   @media (min-width: $mq-tablet) {
     height: 540px;
   }
 }
 .site-block-header {
   margin: 0 0 $space-medium;
+}
+.site-block-footer {
+  padding-bottom: $space-small;
 }
