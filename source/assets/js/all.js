@@ -113,7 +113,7 @@ js.main = {
       element: $('#why'),
       handler: function(direction){
         if (direction === 'down') {
-          gsap.to(".site-block-hero", {delay: 1, ease: "circ.out", duration: 1, opacity: 0});
+          gsap.to(".site-block-hero", {delay: 0, duration: 0, opacity: 0});
           // $('.site-block-hero').css('opacity', '0');
         }
       },
