@@ -10,6 +10,7 @@ js.main = {
     this.externalLinks();
     this.gsapPageLoad();
     this.waypointsHeader();
+    this.wavypointHero();
   },
   cookiesAlert: function() {
     window.addEventListener("load", function(){
@@ -106,6 +107,28 @@ js.main = {
         offset: '0'
       })
     });
+  },
+  wavypointHero: function() {
+    var waypoint = new Waypoint({
+      element: $('#why'),
+      handler: function(direction){
+        if (direction === 'down') {
+          gsap.to(".site-block-hero", {delay: 1, ease: "circ.out", duration: 1, opacity: 0});
+          // $('.site-block-hero').css('opacity', '0');
+        }
+      },
+      offset: '0'
+    })
+    var waypoint = new Waypoint({
+      element: $('#why'),
+      handler: function(direction){
+        if (direction === 'up') {
+          gsap.to(".site-block-hero", {delay: 1, ease: "circ.out", duration: 1, opacity: 1});
+          // $('.site-block-hero').css('opacity', '1');
+        }
+      },
+      offset: '0'
+    })
   },
   journalShare: function() {
     $("#journal-share").jsSocials({
