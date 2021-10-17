@@ -9,6 +9,17 @@
   @media (min-width: $mq-tablet) {
     position: fixed;
   }
+  &.dark {
+    .site-nav-link {
+      color: $color-white;
+    }
+    .site-header-logo-img {
+      path {
+        fill: $color-white;
+        // stroke: $color-white;
+      }
+    }
+  }
 }
 .site-header-logo {
   @include flexbox;

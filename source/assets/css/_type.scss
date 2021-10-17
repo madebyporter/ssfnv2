@@ -9,8 +9,6 @@
     }
     html {
       font-size: 62.5%;
-      -webkit-font-smoothing: auto;
-      -moz-osx-font-smoothing: auto;
     }
     body {
       font-family: $font-primary;
@@ -125,6 +123,7 @@
   // Paragraphs
     p, li {
       @extend .t-24;
+      color: $color-black-80;
       margin: 0 0 $space-small 0;
     }
 
@@ -133,6 +132,7 @@
       color: $color-black;
       display: inline-block;
       @extend .t-normal;
+      line-height: 1.3;
       margin: 0 0 $space-x 0;
       position: relative;
       width: 100%;

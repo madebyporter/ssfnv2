@@ -1,7 +1,16 @@
+// Accordion
+  .accordion-header {
+    @extend .padding-bottom-medium;
+  }
+  .accordion-content {
+    @extend .padding-top-large;
+  }
 // Box
   .box {
-    border: 1px solid $color-black;
-    padding: $space-large;
+    padding: $space-large $space-small;
+    @media (min-width: $mq-tablet) {
+      padding: $space-xl $space-xl;
+    }
   }
 
 // Buttons
@@ -11,175 +20,217 @@
     padding: $space-x $space-small;
   }
 
-// Cards
-  .card {
-    padding: $space-medium;
-    @include flexbox;
-    justify-content: flex-end;
-  }
-  .card-inner {
-    height: auto;
-  }
-  .card-journal {
-    height: 300px;
-    margin: 0 0 $space-small 0;
-    @media (min-width: $mq-laptop) {
-      height: 500px;
+// Content
+  .content-section {
+    margin: 0 0 $space-medium 0;
+
+    p {
+      margin: 0 0 $space-small 0;
     }
   }
 
-  // Content
-    .content-section {
-      margin: 0 0 $space-medium 0;
+// Lists
+  ul, ol {
 
-      p {
-        margin: 0 0 $space-small 0;
-      }
+  }
+  .faq-list {
+    @include no-list();
+    margin: $space-small 0;
+    @media (min-width: $mq-desktop) {
+      margin-left: $space-x;
     }
-  // Marquee
-    .marquee {
-      position: relative;
-      width: 100vw;
-      max-width: 100%;
-      overflow-x: hidden;
+  }
+// Marquee
+  .marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 88px;
+    @media (min-width: $mq-tablet) {
       height: 200px;
     }
-    .marquee-content {
-      position: absolute;
-      white-space: nowrap;
-      will-change: transform;
-      animation: marquee 32s linear infinite;
+  }
+  .marquee-content {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+    @include font-size(64);
+    @media (min-width: $mq-tablet) {
+      @include font-size(144);
     }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+  }
+  .marquee-email {
+    @include font-size(24);
+    color: $color-red;
+    @media (min-width: $mq-tablet) {
+      @include font-size(72);
     }
-  // Nav
-    .site-nav {
-      @include flexbox;
-      align-items: center;
-      flex-wrap: wrap;
-      height: 100%;
-      gap: $space-medium;
-      margin-top: $space-x;
-      @media (min-width: $mq-tablet) {
-        flex-wrap: nowrap;
-        gap: $space-small;
-      }
-    }
-    .site-nav-link {
-      @extend .t-16;
-      @extend .t-smallcap;
-      width: 100%;
-      text-align: right;
-      @media (min-width: $mq-tablet) {
-        text-align: left;
-        width: auto;
-      }
-    }
-  // Slider
-    .slider {
-      margin: $space-small 0;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 0 0 0 $space-large;
-      position: relative;
-      width: 100%;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-    .slider-track {
-      display: flex;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+// Nav
+  .site-nav {
+    @include flexbox;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: $space-medium;
+    margin-top: $space-x;
+    @media (min-width: $mq-tablet) {
       flex-wrap: nowrap;
-      gap: $space-medium;
-      padding-right: $space-xl;
-      width: calc(610px * 3);
+      gap: $space-small;
+      margin: 0;
     }
-    .slider-block {
+  }
+  .site-nav-link {
+    @extend .t-16;
+    @extend .t-smallcap;
+    color: $color-black;
+    // opacity: 0;
+    width: 100%;
+    text-align: right;
+    &:hover {
+      color: $color-white;
+    }
+    @media (min-width: $mq-tablet) {
+      text-align: left;
+      width: auto;
+    }
+  }
+// Slider
+  .slider {
+    margin: $space-small 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 $space-small 0 0;
+    position: relative;
+    width: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (min-width: $mq-laptop) {
+      margin: $space-medium 0;
+      padding: 0 0 0 $space-large;
+    }
+  }
+  .slider-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $space-small;
+    margin-left: $space-small;
+    padding-right: $space-medium;
+    width: calc(320px * 3);
+    @media (min-width: $mq-tablet) {
+      gap: $space-medium;
+      margin-left: $space-medium;
+      width: calc(610px * 3);
+      padding-right: $space-xl;
+    }
+  }
+  .slider-block {
+    align-content: center;
+    align-items: center;
+    border: 1px solid $color-black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: $space-medium;
+    width: 320px;
+    @media (min-width: $mq-tablet) {
+      padding: $space-large;
+      width: 610px;
+    }
+  }
+  .slider-block-center {
+    justify-content: center;
+    text-align: center;
+  }
+  .slider-header {
+    @extend .t-14;
+    @extend .t-smallcap;
+  }
+  .slider-content {
+    @extend .t-24;
+  }
+  .slider-aside {
+    @extend .t-18;
+  }
+  .slider-img {
+    background: $color-black-20;
+    border-radius: 150px;
+    height: 150px;
+    margin: 0 0 $space-medium 0;
+    width: 150px;
+  }
+// Vectors
+  .group-vector {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: $space-small;
+    flex-wrap: wrap;
+    margin: $space-medium 0 0;
+    width: 100%;
+    @media (min-width: $mq-phonexl) {
+      flex-wrap: wrap;
+      margin: $space-medium 0;
+    }
+    @media (min-width: $mq-laptop) {
+      flex-wrap: nowrap;
+      margin: $space-medium 0;
+    }
+    .vector {
       align-content: center;
       align-items: center;
       border: 1px solid $color-black;
       display: flex;
       flex-wrap: wrap;
-      padding: $space-large;
-      width: 610px;
-    }
-    .slider-block-center {
+      height: 200px;
       justify-content: center;
-      text-align: center;
-    }
-    .slider-header {
-      @extend .t-14;
-      @extend .t-smallcap;
-    }
-    .slider-content {
-      @extend .t-24;
-    }
-    .slider-aside {
-      @extend .t-18;
-    }
-    .slider-img {
-      background: $color-black-200;
-      border-radius: 150px;
-      height: 150px;
-      margin: 0 0 $space-medium 0;
-      width: 150px;
-    }
-  // Vectors
-    .group-vector {
-      align-items: flex-end;
-      display: flex;
-      gap: $space-small;
-      flex-wrap: wrap;
-      margin: $space-medium 0;
-      width: 99%;
-      @media (min-width: $mq-tablet) {
-        flex-wrap: nowrap;
+      padding: $space-medium;
+      width: 100%;
+      @media (min-width: $mq-phonexl) {
+        width: auto;
+        flex-grow: 2; 
       }
-      .vector {
-        align-content: center;
-        align-items: center;
-        border: 1px solid $color-black-200;
+      @media (min-width: $mq-tablet) {
+        width: auto;
+        flex-grow: 1; 
+      }
+      @media (min-width: $mq-laptop) {
+        border: 0px;
+        width: auto;
+        height: auto;
+        padding: 0;
         display: flex;
-        flex-wrap: wrap;
-        height: 320px;
-        justify-content: center;
-        padding: $space-medium;
-        width: 320px;
-      }
-      .vector-img {
-        display: block;
-        height: 50%;
-        width: 100%;
-        @media (min-width: $mq-tablet) {
-          
-        }
-      }
-      .vector-caption {
-        @extend .t-smallcap;
-        @extend .t-10;
-        display: inline-block;
-        margin-top: $space-small;
-        text-align: center;
-        width: 100%;
       }
     }
-    .group-vector--specializations {
-      // margin-top: 0;
-      @media (min-width: $mq-tablet) {
-        margin-top: -40px;
+    .vector-img {
+      display: block;
+      height: 50%;
+      width: 100%;
+      @media (min-width: $mq-laptop) {
+        height: auto;
       }
     }
-    // .vector-device--mobile {
-    //   width: 25%;
-    // }
-    // .vector-device--tablet {
-    //   width: 68%;
-    // }
-    // .vector-device--laptop {
-    //   width: 35%;
-    // }
-    // .vector-device--desktop {
-    //   width: 58%;
-    // }
+    .vector-img-mobile {
+      max-width: 70%;
+    }
+    .vector-caption {
+      @extend .t-smallcap;
+      @extend .t-10;
+      display: inline-block;
+      margin-top: $space-small;
+      text-align: center;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+  .group-vector--specializations {
+    // margin-top: 0;
+    @media (min-width: $mq-laptop) {
+      margin-top: -40px;
+    }
+  }

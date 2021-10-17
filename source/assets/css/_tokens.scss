@@ -1,0 +1,65 @@
+/**
+  Welcome to Tokens
+**/
+
+  // Black Color
+    $color-black-100:       rgba(37,40,41,1);
+    $color-black-80:        rgba(37,40,41,.8);
+    $color-black-60:        rgba(37,40,41,.6);
+    $color-black-40:        rgba(37,40,41,.4);
+    $color-black-20:        rgba(37,40,41,.2);
+    $color-black-10:        rgba(37,40,41,.1);
+    $color-black-5:         rgba(37,40,41,.05);
+
+  // White Color
+    $color-white-100:       rgba(255,255,255,1);
+    $color-white-80:        rgba(255,255,255,.8);
+    $color-white-60:        rgba(255,255,255,.6);
+    $color-white-40:        rgba(255,255,255,.4);
+    $color-white-20:        rgba(255,255,255,.2);
+    $color-white-10:        rgba(255,255,255,.1);
+    $color-white-5:         rgba(255,255,255,.05);
+
+  // Primary Colors
+    $color-black:       $color-black-100;
+    $color-gray:        $color-black-60;
+    $color-white:       $color-white-100;
+    $color-blue:        #2DBBD9;
+    $color-green:       #2DD9A7;
+    $color-red:       #FF4949;
+    $color-magenta:   #D92D85;
+
+  // Text Color Classes
+    .color-text-blue {color: $color-blue !important}
+    .color-text-green {color: $color-green !important}
+    .color-text-red {color: $color-red !important}
+    .color-text-magenta {color: $color-magenta !important}
+  
+  // Fonts
+    $font-primary:      'Manrope', sans-serif;
+
+  // Media Queries
+    $mq-phonexl:        576px;
+    $mq-tablet:         768px;
+    $mq-laptop:         992px;
+    $mq-desktop:        1200px;
+    $mq-wide:           1600px;
+
+  // Spacing
+    $space-x:           1rem;
+    $space-small:       $space-x * 2; // 2rem
+    $space-medium:      $space-small * 2; // 4rem
+    $space-large:       $space-medium * 2; // 16rem
+    $space-xl:          $space-large * 2; // 32rem
+
+  // Animations
+    $trans-primary:     cubic-bezier(.49,.02,.29,1);
+
+  // Links
+    a {
+      color: $color-red;
+      // @include transition;
+      &:hover {
+        color: $color-magenta;
+      }
+    }

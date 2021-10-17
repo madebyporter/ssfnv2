@@ -1,18 +1,111 @@
 .site-block {
   padding: $space-large $space-small;
+  position: relative;
+  z-index: 10;
+  @media (min-width: $mq-tablet) {
+    padding: $space-xl $space-small;
+  }
+}
+.site-block-white {
+  background: $color-white;
+}
+.site-block-black {
+  background: $color-black;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-white-80;
+  }
+  .t-smallcap {
+    color: $color-white-60;
+  }
+  p {
+    color: $color-white-60;
+  }
+  .slider-block {
+    background: $color-white-5;
+  }
+  .slider-aside {
+    color: $color-white-40;
+  }
+  .marquee-content {
+    color: $color-white-100;
+  }
+}
+.site-block-blue {
+  background: $color-blue;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-black;
+  }
+  p {
+    color: $color-black-60;
+  }
+}
+.site-block-green {
+  background: $color-green;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-black;
+  }
+  p {
+    color: $color-black-60;
+  }
 }
 .site-block-hero {
-  background: #f9f9f9;
+  background-image: linear-gradient(90deg, $color-red, $color-magenta);
+  background-position: 0% 50%;
+  background-color: $color-red;
+  background-size: 400% 400%;
+  background-attachment: fixed;
   @include flexbox;
   align-items: flex-end;
   height: 80vh;
-  padding: $space-small;
-  @media (min-width: $mq-tablet) {
-    height: 540px;
+  overflow: hidden;
+  padding: $space-medium $space-small;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  &:after {
+    background-image: linear-gradient(90deg, $color-red, $color-magenta);
+    background-position: 100% 50%;
+    background-color: $color-red;
+    background-size: 400% 400%;
+    @include animations($name: heroGradient, $duration: 23s, $iteration: infinite, $direction: alternate);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    z-index: 0;
   }
+  @keyframes heroGradient {
+    0%{opacity: 0}
+    50%{opacity: 100}
+    100%{opacity: 0}
+  }
+  @media (min-width: $mq-tablet) {
+    height: 80vh;
+  }
+}
+.site-block-hero-content {
+  position: relative;
+  z-index: 10;
 }
 .site-block-header {
   margin: 0 0 $space-medium;
+}
+.site-block-projects {
+  margin: $space-small 0;
+  .site-project {
+    margin-bottom: $space-small;
+    @media (min-width: $mq-laptop) {
+      &:nth-child(even){
+        margin-top: -$space-large;
+      }
+    }
+  }
+  .site-project-cta-disabled {
+    color: $color-black-40;
+  }
 }
 .site-block-footer {
   padding-bottom: $space-small;

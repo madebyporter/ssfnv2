@@ -126,11 +126,11 @@
   }
 
 // Animations
-  @mixin animations($name,$delay:0s,$duration:200ms,$timing:$trans-primary,$direction:normal){
-    -webkit-animation: $name $duration $timing $delay $direction;
-    -moz-animation:    $name $duration $timing $delay $direction;
-    -o-animation:      $name $duration $timing $delay $direction;
-    animation:         $name $duration $timing $delay $direction;
+  @mixin animations($name,$delay:0s,$duration:200ms,$timing:$trans-primary,$iteration:1,$direction:normal){
+    -webkit-animation: $name $duration $timing $delay $iteration $direction;
+    -moz-animation:    $name $duration $timing $delay $iteration $direction;
+    -o-animation:      $name $duration $timing $delay $iteration $direction;
+    animation:         $name $duration $timing $delay $iteration $direction;
   }
 
 // No List

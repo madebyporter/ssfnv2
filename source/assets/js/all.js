@@ -8,6 +8,8 @@ js.main = {
   init: function () {
     // this.cookiesAlert();
     this.externalLinks();
+    this.gsapPageLoad();
+    this.waypointsHeader();
   },
   cookiesAlert: function() {
     window.addEventListener("load", function(){
@@ -38,6 +40,17 @@ js.main = {
       }
     });
   },
+  gsapPageLoad: function() {
+    // var tl = gsap.timeline({repeat: 0, repeatDelay: 0});
+    gsap.to(".site-main", {delay: 1, ease: "circ.out", duration: 1, opacity: 1});
+    gsap.fromTo(".site-block-hero-content", {y: '120%'}, {delay: 1.2, ease: "circ.out", duration: 0.8, y: '0'});
+    gsap.fromTo(".site-header-logo", {y: '-150%'}, {delay: 1.5, ease: "circ.out", duration: 1.5, y: '0'});
+    gsap.fromTo(".site-nav-link:nth-child(1)", {y: '-20px', opacity: '0'}, {delay: 3.2, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
+    gsap.fromTo(".site-nav-link:nth-child(2)", {y: '-20px', opacity: '0'}, {delay: 3.3, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
+    gsap.fromTo(".site-nav-link:nth-child(3)", {y: '-20px', opacity: '0'}, {delay: 3.4, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
+    gsap.fromTo(".site-nav-link:nth-child(4)", {y: '-20px', opacity: '0'}, {delay: 3.5, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
+    gsap.fromTo(".site-nav-link:nth-child(5)", {y: '-20px', opacity: '0'}, {delay: 3.6, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
+  },
   masonry: function() {
     var $grid = $('.grid').masonry({
       // options
@@ -49,25 +62,49 @@ js.main = {
     });
   },
   waypointsHeader: function() {
-    var b = document.getElementsByTagName('body')[0];
-    var waypoint = new Waypoint({
-      element: document.getElementsByClassName("site-block")[1], 
-      handler: function(direction) { 
-        if (direction === 'down'){
-          b.classList.add("fold");
-        }
-      },
-      offset: '0'
+    var $b = $('.site-block-black');
+    var $s = $('.site-block-white');
+    $b.each(function () {
+      var waypoint = new Waypoint({
+        element: this,
+        handler: function(direction){
+          if (direction === 'up') {
+            $('.site-header').addClass('dark');
+          }
+        },
+        offset: '-80%'
+      })
+      var waypoint = new Waypoint({
+        element: this,
+        handler: function(direction){
+          if (direction === 'down') {
+            $('.site-header').addClass('dark');
+          }
+        },
+        offset: '0'
+      })
     });
-
-    var waypoint = new Waypoint({
-      element: document.getElementsByClassName("site-block")[1],
-      handler: function(direction) {
-        if (direction === 'up'){
-          b.classList.remove("fold");
+    $s.each(function () {
+      var waypoint = new Waypoint({
+        element: this,
+        handler: function(direction){
+          if (direction === 'up') {
+            $('.site-header').removeClass('dark');
+          }
+        },
+        offset: function() {
+          return -this.element.clientHeight
         }
-      },
-      offset: '0'
+      })
+      var waypoint = new Waypoint({
+        element: this,
+        handler: function(direction){
+          if (direction === 'down') {
+            $('.site-header').removeClass('dark');
+          }
+        },
+        offset: '0'
+      })
     });
   },
   journalShare: function() {
