@@ -169,6 +169,10 @@
     height: 150px;
     margin: 0 0 $space-medium 0;
     width: 150px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
   }
 // Vectors
   .group-vector {
