@@ -108,20 +108,21 @@
     -webkit-overflow-scrolling: touch;
     padding: 0 $space-small 0 0;
     position: relative;
-    width: 100%;
+    width: 106%;
     &::-webkit-scrollbar {
       display: none;
     }
     @media (min-width: $mq-laptop) {
       margin: $space-medium 0;
       padding: 0 0 0 $space-large;
+      width: 100%;
     }
   }
   .slider-track {
     display: flex;
     flex-wrap: nowrap;
     gap: $space-small;
-    margin-left: $space-small;
+    margin-left: 0;
     padding-right: $space-medium;
     width: calc(320px * 3);
     @media (min-width: $mq-tablet) {
