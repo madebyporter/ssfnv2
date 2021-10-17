@@ -172,7 +172,7 @@
     display: inline-flex;
     gap: $space-small;
     flex-wrap: wrap;
-    margin: $space-medium 0 0;
+    margin: $space-small 0 0;
     width: 100%;
     @media (min-width: $mq-phonexl) {
       flex-wrap: wrap;
