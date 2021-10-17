@@ -10,7 +10,11 @@ js.main = {
     this.externalLinks();
     this.gsapPageLoad();
     this.waypointsHeader();
-    this.wavypointHero();
+    this.waypointsHero();
+    this.waypointsServices();
+    this.waypointsWork();
+    this.waypointsSliderHow();
+    this.waypointsSliderTeam();
     this.smoothScroll();
   },
   cookiesAlert: function() {
@@ -147,7 +151,7 @@ js.main = {
       })
     });
   },
-  wavypointHero: function() {
+  waypointsHero: function() {
     var waypoint = new Waypoint({
       element: $('#why'),
       handler: function(direction){
@@ -163,11 +167,63 @@ js.main = {
       handler: function(direction){
         if (direction === 'up') {
           gsap.to(".site-block-hero", {delay: 1, ease: "circ.out", duration: 1, opacity: 1});
-          // $('.site-block-hero').css('opacity', '1');
         }
       },
       offset: '0'
     })
+  },
+  waypointsServices: function() {
+    // Services Animations
+    var waypoint = new Waypoint({
+      element: $('#services'),
+      handler: function(direction){
+        if (direction === 'down') {
+          gsap.to(".vector:nth-child(1)", {delay: 0, duration: 1, opacity: 1});
+          gsap.to(".vector:nth-child(2)", {delay: 0.25, duration: 1, opacity: 1});
+          gsap.to(".vector:nth-child(3)", {delay: 0.5, duration: 1, opacity: 1});
+          gsap.to(".vector:nth-child(4)", {delay: 0.75, duration: 1, opacity: 1});
+        }
+      },
+      offset: '0'
+    })
+  },
+  waypointsWork: function() {
+    // Portfolio Animations
+    var waypoint = $('.site-project').waypoint(function(direction) {
+      if (direction === 'down') {
+        gsap.to($('.box-content'), {delay: 0, duration: 1, opacity: 1});
+      }
+    }, {
+      offset: '50%'
+    });
+  },
+  waypointsSliderHow: function() {
+    // Slider Animations
+    $b = $("#howSlider");
+    var waypoints = $b.waypoint(function(direction){
+      var $bs = $(this.element).find('.slider-block');
+      if (direction === 'down') {
+        $bs.each(function(i){
+          gsap.to($(this), {delay: i * 0.25, duration: 1, opacity: 1});
+        });
+      }
+    }, {
+      offset: '50%'
+    });
+  },
+  waypointsSliderTeam: function() {
+    // Slider Animations
+    $b = $("#teamSlider");
+    var waypints = $b.waypoint(function(direction){
+      var $bs = $(this.element).find('.slider-block');
+      if (direction === 'down') {
+        $bs.each(function(i){
+          gsap.to($(this), {delay: i * 0.25, duration: 1, opacity: 1});
+        });
+      }
+    }, {
+      offset: '50%'
+    });
   },
   journalShare: function() {
     $("#journal-share").jsSocials({

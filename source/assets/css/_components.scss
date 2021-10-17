@@ -12,6 +12,9 @@
       padding: $space-xl $space-xl;
     }
   }
+  .box-content {
+    opacity: 0;
+  }
 
 // Buttons
   .btn {
@@ -138,6 +141,7 @@
     border: 1px solid $color-black;
     display: flex;
     flex-wrap: wrap;
+    opacity: 0;
     padding: $space-medium;
     width: 320px;
     @media (min-width: $mq-tablet) {
@@ -190,6 +194,7 @@
       flex-wrap: wrap;
       height: 200px;
       justify-content: center;
+      opacity: 0;
       padding: $space-medium;
       width: 100%;
       @media (min-width: $mq-phonexl) {
