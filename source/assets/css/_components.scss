@@ -106,7 +106,7 @@
     margin: $space-small 0;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 0 $space-small 0 0;
+    padding: 0 $space-small;
     position: relative;
     width: 106%;
     &::-webkit-scrollbar {
@@ -115,7 +115,7 @@
     @media (min-width: $mq-laptop) {
       margin: $space-medium 0;
       padding: 0 0 0 $space-large;
-      width: 100%;
+      width: 106%;
     }
   }
   .slider-track {
@@ -127,7 +127,7 @@
     width: calc(320px * 3);
     @media (min-width: $mq-tablet) {
       gap: $space-medium;
-      margin-left: $space-medium;
+      // margin-left: $space-medium;
       width: calc(610px * 3);
       padding-right: $space-xl;
     }
