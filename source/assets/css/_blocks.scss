@@ -56,7 +56,7 @@
   background-attachment: fixed;
   @include flexbox;
   align-items: flex-end;
-  height: 80vh;
+  height: 99vh;
   overflow: hidden;
   padding: $space-medium $space-small;
   position: fixed;
@@ -83,7 +83,7 @@
     100%{opacity: 0}
   }
   @media (min-width: $mq-tablet) {
-    height: 80vh;
+    height: 99vh;
   }
 }
 .site-block-hero-content {
