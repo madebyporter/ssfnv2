@@ -10,13 +10,15 @@
     position: fixed;
   }
   &.dark {
-    .site-nav-link {
-      color: $color-white;
-    }
-    .site-header-logo-img {
-      path {
-        fill: $color-white;
-        // stroke: $color-white;
+    @media (min-width: $mq-tablet) {
+      .site-nav-link {
+        color: $color-white;
+      }
+      .site-header-logo-img {
+        path {
+          fill: $color-white;
+          // stroke: $color-white;
+        }
       }
     }
   }
