@@ -42,6 +42,9 @@
     @media (min-width: $mq-desktop) {
       margin-left: $space-x;
     }
+    li:nth-child(even){
+      color: $color-black-40;
+    }
   }
 // Marquee
   .marquee {
