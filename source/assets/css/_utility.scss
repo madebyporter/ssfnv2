@@ -54,3 +54,6 @@
   .padding-right-medium {padding-right: $space-small !important}
   .padding-right-large {padding-right: $space-medium !important}
   .padding-right-xl {padding-right: $space-large !important}
+
+  div[class^="border-"], div[class*=" border-"] {padding-bottom: $space-medium;}
+  .border-bottom {border-bottom: 1px solid $color-black-20}

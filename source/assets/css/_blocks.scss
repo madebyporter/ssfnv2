@@ -99,8 +99,11 @@
   .site-project {
     margin-bottom: $space-small;
     @media (min-width: $mq-laptop) {
-      &:nth-child(even){
+      &:nth-child(even), &:nth-child(odd){
         margin-top: -$space-large;
+      }
+      &:first-child{
+        margin-top: 0;
       }
     }
   }

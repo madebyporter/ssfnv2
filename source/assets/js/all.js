@@ -11,9 +11,8 @@ js.main = {
     this.gsapPageLoad();
     this.waypointsHeader();
     this.waypointsHero();
-    this.waypointsServices();
     this.waypointsWork();
-    this.waypointsSliderHow();
+    this.waypointsSliderSolution();
     this.waypointsSliderTeam();
     this.smoothScroll();
   },
@@ -56,6 +55,7 @@ js.main = {
     gsap.fromTo(".site-nav-link:nth-child(3)", {y: '-20px', opacity: '0'}, {delay: 3.4, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
     gsap.fromTo(".site-nav-link:nth-child(4)", {y: '-20px', opacity: '0'}, {delay: 3.5, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
     gsap.fromTo(".site-nav-link:nth-child(5)", {y: '-20px', opacity: '0'}, {delay: 3.6, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
+    gsap.fromTo(".site-nav-link:nth-child(6)", {y: '-20px', opacity: '0'}, {delay: 3.7, ease: "circ.out", duration: 1, opacity: '1', y: '0'});
   },
   masonry: function() {
     var $grid = $('.grid').masonry({
@@ -89,7 +89,7 @@ js.main = {
           event.preventDefault();
           $('html, body').animate({
             scrollTop: target.offset().top
-          }, 1000, function() {
+          }, 500, function() {
             // Callback after animation
             // Must change focus!
             var $target = $(target);
@@ -152,8 +152,9 @@ js.main = {
     });
   },
   waypointsHero: function() {
+    var $problem = $('#problem');
     var waypoint = new Waypoint({
-      element: $('#why'),
+      element: $problem,
       handler: function(direction){
         if (direction === 'down') {
           gsap.to(".site-block-hero", {delay: 0, duration: 0, opacity: 0, visibility: "hidden"});
@@ -163,25 +164,10 @@ js.main = {
       offset: '0'
     })
     var waypoint = new Waypoint({
-      element: $('#why'),
+      element: $problem,
       handler: function(direction){
         if (direction === 'up') {
           gsap.to(".site-block-hero", {delay: 1, ease: "circ.out", duration: 1, opacity: 1, visibility: "visible"});
-        }
-      },
-      offset: '0'
-    })
-  },
-  waypointsServices: function() {
-    // Services Animations
-    var waypoint = new Waypoint({
-      element: $('#services'),
-      handler: function(direction){
-        if (direction === 'down') {
-          gsap.to(".vector:nth-child(1)", {delay: 0, duration: 1, opacity: 1});
-          gsap.to(".vector:nth-child(2)", {delay: 0.25, duration: 1, opacity: 1});
-          gsap.to(".vector:nth-child(3)", {delay: 0.5, duration: 1, opacity: 1});
-          gsap.to(".vector:nth-child(4)", {delay: 0.75, duration: 1, opacity: 1});
         }
       },
       offset: '0'
@@ -197,9 +183,9 @@ js.main = {
       offset: '50%'
     });
   },
-  waypointsSliderHow: function() {
+  waypointsSliderSolution: function() {
     // Slider Animations
-    $b = $("#howSlider");
+    $b = $("#solutionSlider");
     var waypoints = $b.waypoint(function(direction){
       var $bs = $(this.element).find('.slider-block');
       if (direction === 'down') {
