@@ -14,7 +14,7 @@ js.main = {
     this.waypointsWork();
     this.waypointsSliderSolution();
     this.waypointsSliderTeam();
-    this.smoothScroll();
+    // this.smoothScroll();
   },
   cookiesAlert: function() {
     window.addEventListener("load", function(){
