@@ -55,5 +55,11 @@
   .padding-right-large {padding-right: $space-medium !important}
   .padding-right-xl {padding-right: $space-large !important}
 
-  div[class^="border-"], div[class*=" border-"] {padding-bottom: $space-medium;}
-  .border-bottom {border-bottom: 1px solid $color-black-20}
+// Borders
+  // div[class^="border-"], div[class*=" border-"] {padding-bottom: $space-medium;}
+
+  .border-bottom-gray-light {border-bottom: 1px solid $color-black-20}
+  .border-top-gray-dark {border-top: 1px solid $color-white-20}
+  .border-bottom-gray-dark {border-bottom: 1px solid $color-white-20}
+  .border-left-gray-dark {border-left: 1px solid $color-white-20}
+  .border-right-gray-dark {border-right: 1px solid $color-white-20}

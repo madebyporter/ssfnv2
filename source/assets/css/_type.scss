@@ -174,5 +174,13 @@
       }
     }
 
-  // Classes
+  // Superscript & Subscript
+    sub {
+      bottom: 0;
+      font-size: 50%;
+    }
 
+  // Classes
+    .lineheight-tight {line-height: 1}
+    .lineheight-normal {line-height: 1.5}
+    .lineheight-loose {line-height: 2}

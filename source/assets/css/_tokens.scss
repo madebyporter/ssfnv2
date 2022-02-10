@@ -26,14 +26,15 @@
     $color-white:       $color-white-100;
     $color-blue:        #2DBBD9;
     $color-green:       #2DD9A7;
-    $color-red:       #FF4949;
-    $color-magenta:   #D92D85;
+    $color-red:         #FF4949;
+    $color-magenta:     #D92D85;
 
   // Text Color Classes
     .color-text-blue {color: $color-blue !important}
     .color-text-green {color: $color-green !important}
     .color-text-red {color: $color-red !important}
     .color-text-magenta {color: $color-magenta !important}
+    .color-text-white {color: $color-white !important}
   
   // Fonts
     $font-primary:      'Manrope', sans-serif;
