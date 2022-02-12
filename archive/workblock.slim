@@ -1,0 +1,109 @@
+#work.site-block.px-lg-0.site-block-white
+  .container-fluid
+      .row
+        .col-12.col-sm-10.offset-sm-1.col-lg-2.offset-lg-1.col-xl-2
+          h2.t-smallcap
+            | The Work
+      .site-block-projects
+        .row.site-project
+          .col-12.col-lg-7.offset-lg-5 
+            #faithfulhomes.box.site-block-blue
+              .box-content
+                .row
+                  .col-12.col-sm-10.offset-sm-1.col-lg-8.col-xl-10
+                    h3.h3
+                      | Faithful Homes
+                    p
+                      | We work with Faithul Homes, a company that helps people with disabilities get to work, digitize their business processes.
+                    p.site-project-cta-disabled
+                      | Live Case Coming Soon
+        .row.site-project
+          .col-12.col-lg-7
+            #forcesunite.box.site-block-green
+              .box-content
+                .row
+                  .col-12.col-sm-10.offset-sm-1.col-lg-8.col-xl-10
+                    h3.h3
+                      | Organics Alive
+                    p
+                      | We're helping an organic fertilizer for cannabis brand in SoCal by building &amp; managing their e-Commerce system.
+                    p.site-project-cta-disabled
+                      | Live Case coming soon
+        .row.site-project
+          .col-12.col-lg-7.offset-lg-5 
+            #faithfulhomes.box.site-block-blue
+              .box-content
+                .row
+                  .col-12.col-sm-10.offset-sm-1.col-lg-8.col-xl-10
+                    h3.h3
+                      | Novvum
+                    p
+                      | We worked with Novvum, a software development agency, to design digital systems for their two marketing websites, Novvum.io &amp; Reactheadless.com.
+                    p.site-project-cta-disabled
+                      | Live Case Coming Soon
+#faq.site-block.px-0.site-block-white
+  .container-fluid
+    .accordion
+      .row.accordion-header style="border-bottom: 1px solid black"
+        .col-12.col-sm-10.offset-sm-1.col-lg-2.offset-lg-1.col-xl-2.px-5.px-lg-0
+          h2.t-smallcap
+            | Some Q&A
+      .row.accordion-content
+        .col-12.col-sm-10.offset-sm-1.col-lg-3.offset-lg-1.px-5.px-lg-0
+          h3.h3
+            | What type of clients you work with?
+        .col-12.col-sm-10.offset-sm-1.col-md-10.col-lg-5.offset-lg-1.px-5.px-lg-0
+          ul.faq-list
+            li Your revenue is north of $100k annually.
+            li You will need strategy first, production second. If you already have a plan, we may not be as valuable to you.
+            li We love to work with brands who do their homework on us and like our work.
+            li We love small to medium companies with flexible contractual terms. 
+            li You’re into remote teams and don’t need anyone local or on sync.
+            li Clients who are looking for the best results, not the lowest price.
+#team.site-block.pb-0.site-block-black
+  .container-fluid
+    .row
+      .col-12.col-sm-10.offset-sm-1.col-lg-3.offset-lg-1.col-xl-3
+        h2.t-smallcap.margin-bottom-large
+          | Our Team
+    .row 
+      .col-12.col-sm-10.offset-sm-1.col-lg-4.offset-lg-1
+        h3.h3
+          | We’re a designer-led collective that comes together to build things.
+      .col-12.col-sm-10.offset-sm-1.col-lg-5
+        p
+          | During the discovery to production phases, we build a contracted team based on projects needs.
+#teamSlider.site-block.pt-0.ps-0.site-block-black.site-block-slider
+  .container-fluid
+    .row
+      .col-12
+        .slider
+          .slider-track
+            .slider-block.slider-block-center
+              .slider-img
+                = image_tag "stephenmiller.jpg", :alt => "Stephen Miller", :class => ""
+              h3.slider-header
+                | Stephen Miller
+              p.slider-content
+                | Partner, Photographer & Designer
+              aside.slider-aside
+                = link_to "stephenlamiller.com", "https://stephenlamiller.com", :class => ""
+            .slider-block.slider-block-center
+              .slider-img
+                = image_tag "chrisporter.jpg", :alt => "Chris Porter", :class => ""
+              h3.slider-header
+                | Chris Porter
+              p.slider-content
+                | Partner, Design Engineer & Music Producer
+              aside.slider-aside
+                = link_to "madebyporter.com", "https://madebyporter.com", :class => ""
+            .slider-block.slider-block-center
+              .slider-img
+                = image_tag "forcesunite.jpg", :alt => "Chris Porter", :class => ""
+              h3.slider-header
+                | Forces Unite
+              p.slider-content
+                | Our collective of independent designers &amp; engineers
+              aside.slider-aside
+                = link_to "forcesunite.us", "https://forcesunite.us", :class => ""
+= partial "/partials/cta-white"
